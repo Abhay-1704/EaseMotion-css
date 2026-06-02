@@ -773,7 +773,7 @@ animation:
     var(--ease-ease-bounce);
 }
 
-/* Morphing Card Hover
+/* Morphings Card Hover
    Standardized to: .ease-hover-morph-card */
 .ease-hover-morph-card {
   border-radius: 0;

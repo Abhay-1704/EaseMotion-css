@@ -1,0 +1,98 @@
+.ease-spotlight-text {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #1a1a2e 30%, #ffffff 50%, #1a1a2e 70%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: ease-spotlight-sweep 2.5s linear infinite;
+    display: inline-block;
+}
+
+@keyframes ease-spotlight-sweep {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.ease-spotlight-fast {
+    animation-duration: 1s;
+}
+
+.ease-spotlight-slow {
+    animation-duration: 5s;
+}
+
+.ease-spotlight-glow {
+    background: linear-gradient(120deg, #1a1a2e 30%, #6c63ff 45%, #ec4899 55%, #1a1a2e 70%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(108, 99, 255, 0.3);
+}
+
+.ease-spotlight-blue {
+    background: linear-gradient(120deg, #1a1a2e 30%, #06b6d4 45%, #22d3ee 55%, #1a1a2e 70%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.ease-spotlight-gold {
+    background: linear-gradient(120deg, #1a1a2e 30%, #fbbf24 45%, #fef08a 55%, #1a1a2e 70%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.ease-spotlight-text-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.ease-spotlight-word {
+    font-size: 3rem;
+    font-weight: 800;
+    background: linear-gradient(120deg, #1a1a2e 30%, #ffffff 50%, #1a1a2e 70%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: ease-spotlight-sweep 2.5s linear infinite;
+    animation-delay: calc(var(--word-index, 0) * 0.2s);
+    display: inline-block;
+}
+
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(1) { --word-index: 0; }
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(2) { --word-index: 1; }
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(3) { --word-index: 2; }
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(4) { --word-index: 3; }
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(5) { --word-index: 4; }
+.ease-spotlight-text-container .ease-spotlight-word:nth-child(6) { --word-index: 5; }
+
+.ease-spotlight-reverse {
+    animation-direction: reverse;
+}
+
+.ease-spotlight-pause {
+    animation-play-state: paused;
+}
+
+.ease-spotlight-text:hover {
+    animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ease-spotlight-text,
+    .ease-spotlight-word {
+        animation: none;
+        background-position: 0 0;
+        color: white;
+    }
+}

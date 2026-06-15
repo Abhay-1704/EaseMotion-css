@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EaseMotion CSS - Animated Word Scrambler</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0d0d14;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            text-align: center;
+            max-width: 900px;
+        }
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #6c63ff, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-family: system-ui;
+            margin-bottom: 2rem;
+        }
+        .demo-section {
+            background: #1a1a2e;
+            border-radius: 1rem;
+            padding: 3rem;
+            margin: 2rem 0;
+        }
+        .scramble-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin: 1rem 0;
+        }
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        button {
+            background: #2a2a3e;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            color: white;
+            cursor: pointer;
+            font-family: system-ui;
+        }
+        button.active {
+            background: #6c63ff;
+        }
+        .note {
+            background: #1a1a2e;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            color: #a1a1aa;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🔤 Animated Word Scrambler</h1>
+    
+    <div class="demo-section">
+        <div id="scrambler1" class="ease-word-scrambler scramble-text" data-text="CYBERPUNK">CYBERPUNK</div>
+        <div id="scrambler2" class="ease-word-scrambler scramble-text" data-text="NEON FUTURE">NEON FUTURE</div>
+        <div id="scrambler3" class="ease-word-scrambler scramble-text" data-text="DIGITAL DREAM">DIGITAL DREAM</div>
+    </div>
+
+    <div class="controls">
+        <button id="scrambleAll">🔄 Scramble All</button>
+        <button id="scrambleFast">⚡ Fast Mode</button>
+        <button id="scrambleSlow">🐢 Slow Mode</button>
+        <button id="resetText">📝 Reset</button>
+    </div>
+
+    <div class="note">
+        💡 Hover over any word to see it scramble! Text randomly cycles through characters before settling.
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+.ease-word-scrambler {
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 800;
+    background: linear-gradient(135deg, #6c63ff, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: relative;
+}
+
+.ease-word-scrambler:hover {
+    transform: scale(1.02);
+}
+
+.ease-word-scrambler::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #6c63ff, #ec4899);
+    transition: width 0.3s ease;
+}
+
+.ease-word-scrambler:hover::after {
+    width: 100%;
+}
+
+.ease-scrambler-fast {
+    animation-duration: 0.3s;
+}
+
+.ease-scrambler-slow {
+    animation-duration: 1s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ease-word-scrambler {
+        transition: none;
+    }
+}

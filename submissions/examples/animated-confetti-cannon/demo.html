@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EaseMotion CSS - Animated Confetti Cannon</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            background: #0d0d14;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 2rem;
+        }
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+        h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #6c63ff, #a855f7);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+        .confetti-area {
+            background: #1a1a2e;
+            border-radius: 1rem;
+            padding: 3rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .confetti-area h3 {
+            color: #c4b5fd;
+            margin-bottom: 1rem;
+        }
+        .controls {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        button {
+            background: linear-gradient(135deg, #6c63ff, #a855f7);
+            border: none;
+            padding: 12px 24px;
+            border-radius: 40px;
+            color: white;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.05);
+        }
+        .note {
+            background: #1a1a2e;
+            padding: 1rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            color: #a1a1aa;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>🎉 Animated Confetti Cannon</h1>
+    <p>Click to celebrate! Burst of colorful particles</p>
+
+    <div class="confetti-area" id="confettiArea">
+        <h3>🎊 Click anywhere to fire confetti! 🎊</h3>
+        <p style="color:#a1a1aa;">Watch the particles burst and fall gracefully</p>
+    </div>
+
+    <div class="controls">
+        <button id="fireCannon">🎆 Fire Confetti!</button>
+        <button id="fireRainbow">🌈 Rainbow Burst</button>
+        <button id="fireGold">💛 Gold Celebration</button>
+        <button id="clearConfetti">🗑️ Clear</button>
+    </div>
+
+    <div class="note">
+        💡 Each confetti piece has unique color, size, speed, and rotation. 150 particles per burst!
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>s
